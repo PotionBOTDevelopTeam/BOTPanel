@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 import './header.css'
 
 const Header = () => {
-    const [mode, setMode] = useState('light')
+    const [mode, setMode] = useState('dark')
 
-    return (<div className={mode}>
-        <div className="header">
+    return (
+    <header>
+        <div className={mode}>
+        <nav className="header">
             <div className="logo">
                 <a href="https://youtu.be/dQw4w9WgXcQ">
                     <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
@@ -21,17 +23,18 @@ const Header = () => {
                     }
                     } />
                     <label htmlFor='mode_switch'>
-                        <img alt="切換深色/淺色模式" src={`./icons/icon_${mode === 'light' ? 'bright' : 'dark'}_mode_${mode === 'light' ? 'light' : 'dark'}.png`} />
+                        <img alt="切換深色/淺色模式" src={`./icons/icon_${mode === 'light' ? 'dark' : 'bright'}_mode_${mode === 'light' ? 'dark' : 'light'}.png`} />
                     </label>
                 </div>
                 <div className="nav_item search">
-                    <a href="#search">
-                        <img alt="搜尋" src={`./icons/icon_search_${mode === 'light' ? 'light' : 'dark'}.png`} />
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <img alt="搜尋" src={`./icons/icon_search_${mode === 'light' ? 'dark' : 'light'}.png`} />
                     </a>
                 </div>
             </div>
-        </div>
-    </div>)
+        </nav>
+    </div>
+    </header>)
 }
 
 export default Header
