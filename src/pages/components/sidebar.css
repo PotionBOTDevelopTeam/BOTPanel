@@ -43,7 +43,7 @@
     margin-left: 10px;
 }
 
-.sidebar_item > .label > b > a {
+.sidebar_item > .label > b {
     line-height: 40px;
     color: #FFF;
     text-decoration: none;
