@@ -1,0 +1,75 @@
+.light > .mobile {
+    .sidebar {
+        height: 100%;
+        width: 250px;
+        background-color: rgb(204, 198, 221);
+        position: fixed;
+        padding: 10px;
+        padding-top: 80px;
+        transition: 0.4s
+    }
+    
+    .show {
+        transform: translateX(0);
+    }
+
+    .noshow {
+        transform: translateX(-100%);
+    }
+
+    .item_container {
+        transition: 0.2s;
+        padding: 10px;
+        padding-top: 0;
+    }
+    
+    .with_buttom_border {
+        transition: 0.2s;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        margin-bottom: 10px;
+    }
+
+    .sidebar_item {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        transition: 0.2s;
+    }
+    
+    .sidebar_item:hover {
+        background-color: rgb(218, 218, 218);
+    }
+    
+    .selected {
+        background-color: rgb(167, 151, 230);
+    }
+
+    .sidebar_item > .icon {
+        width:  20px;
+        height: 20px;
+        padding: 5px;
+        margin: 5px;
+        transition: 0.2s;
+        border-radius: 8px;
+    }
+    
+    .sidebar_item > .icon > img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .item_container > a {
+        text-decoration: none;
+    }
+
+    .sidebar_item > .label {
+        margin-left: 10px;
+    }
+    
+    .sidebar_item > .label > b {
+        line-height: 40px;
+        color: #000000;
+        transition: 0.2s;
+    }
+}

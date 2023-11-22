@@ -1,43 +1,46 @@
-import './header.css'
+import './header_light.css'
+import './header_dark.css'
 
-const Header = ({ mode, setMode, sideBarShow, setSideBarShow}) => {
+const Header = ({ mode, setMode, sideBarShow, setSideBarShow }) => {
     return (
-    <header>
-        <div className={mode}>
-        <nav className="desktop_header">
-            <div className="desktop_logo">
-                <a href="https://youtu.be/dQw4w9WgXcQ">
-                    <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
-                    <h2>神奇的藥水..嗎</h2>
-                </a>
-            </div>
-            <div className="desktop_nav_item desktop_sidebar_switch">
-                <input type="checkbox" id="desktop_sidebar_switch" onChange={() => {
-                    sideBarShow ? setSideBarShow(false) : setSideBarShow(true)
-                }}></input>
-                <label htmlFor='desktop_sidebar_switch'>
-                    <img alt="開啟/關閉側邊欄" src={`./icons/icon_menu_${mode === 'light' ? 'dark' : 'light'}.png`}></img>
-                </label>
-            </div>
-            <div className="desktop_navigator">
-                <div className="desktop_nav_item desktop_light_dark">
-                    <input type='checkbox' id="desktop_mode_switch" onChange={() => {
-                        mode === 'light' ? setMode('dark') : setMode('light')
-                    }
-                    } />
-                    <label htmlFor='desktop_mode_switch'>
-                        <img alt="切換深色/淺色模式" src={`./icons/icon_${mode === 'light' ? 'dark' : 'bright'}_mode_${mode === 'light' ? 'dark' : 'light'}.png`} />
-                    </label>
+        <header>
+            <div className={mode}>
+                <div className="desktop">
+                    <nav className="header">
+                        <div className="logo">
+                            <a href="https://youtu.be/dQw4w9WgXcQ">
+                                <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
+                                <h2>神奇的藥水..嗎</h2>
+                            </a>
+                        </div>
+                        <div className="nav_item sidebar_switch">
+                            <input type="checkbox" id="sidebar_switch" onChange={() => {
+                                sideBarShow ? setSideBarShow(false) : setSideBarShow(true)
+                            }}></input>
+                            <label htmlFor='sidebar_switch'>
+                                <img alt="開啟/關閉側邊欄" src={`./icons/icon_menu_${mode === 'light' ? 'dark' : 'light'}.png`}></img>
+                            </label>
+                        </div>
+                        <div className="navigator">
+                            <div className="nav_item light_dark">
+                                <input type='checkbox' id="mode_switch" onChange={() => {
+                                    mode === 'light' ? setMode('dark') : setMode('light')
+                                }
+                                } />
+                                <label htmlFor='mode_switch'>
+                                    <img alt="切換深色/淺色模式" src={`./icons/icon_${mode === 'light' ? 'dark' : 'bright'}_mode_${mode === 'light' ? 'dark' : 'light'}.png`} />
+                                </label>
+                            </div>
+                            <div className="nav_item search">
+                                <a href="https://youtu.be/dQw4w9WgXcQ">
+                                    <img alt="搜尋" src={`./icons/icon_search_${mode === 'light' ? 'dark' : 'light'}.png`} />
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-                <div className="desktop_nav_item desktop_search">
-                    <a href="https://youtu.be/dQw4w9WgXcQ">
-                        <img alt="搜尋" src={`./icons/icon_search_${mode === 'light' ? 'dark' : 'light'}.png`} />
-                    </a>
-                </div>
             </div>
-        </nav>
-    </div>
-    </header>)
+        </header>)
 }
 
 export default Header

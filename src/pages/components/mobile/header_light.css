@@ -1,0 +1,90 @@
+.light > .mobile {
+    .header {
+        display: flex;
+        width: 100%;
+        background-color: rgb(243, 237, 255);
+        padding: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: 0.2s;
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+    }
+
+    .logo {
+        height: 40px;
+        margin-left: 10px;
+        display: flex;
+    }
+
+    .logo>a {
+        display: flex;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        transition: 0.2s;
+    }
+
+    .logo>a>img {
+        height: 40px;
+    }
+
+    .logo>a>h2 {
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .header>.navigator {
+        position: fixed;
+        right: 15px;
+        margin: 5px;
+        display: flex;
+    }
+
+    .nav_item {
+        width: 30px;
+        height: 30px;
+        background-color: rgb(221, 214, 233);
+        border: 1px solid rgb(226, 226, 226);
+        border-radius: 5px;
+        transition: 0.3s;
+        margin-left: 10px;
+    }
+
+    .sidebar_switch {
+        margin: 5px;
+    }
+
+    .sidebar_switch > label > img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .sidebar_switch > input[type="checkbox"] {
+        display: none;
+    }
+
+    .nav_item:hover {
+        background-color: rgb(232, 232, 232);
+    }
+
+    .navigator>.search>a>img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .navigator>.light_dark>input[type="checkbox"] {
+        display: none;
+    }
+
+    .navigator>.light_dark>label>img {
+        width: 22px;
+        height: 22px;
+        margin: 4px;
+        transition: 0.3s;
+    }
+
+}
