@@ -1,5 +1,5 @@
 .dark {
-    .header {
+    .desktop_header {
         display: flex;
         width: 100%;
         background-color: rgb(6, 0, 18);
@@ -12,36 +12,37 @@
         top: 0;
     }
 
-    .logo {
+    .desktop_logo {
         height: 40px;
         margin-left: 10px;
         display: flex;
     }
 
-    .logo>a {
+    .desktop_logo>a {
         display: flex;
         text-decoration: none;
-        color: white
+        color: white;
+        transition: 0.2s;
     }
 
-    .logo>a>img {
+    .desktop_logo>a>img {
         height: 40px;
     }
 
-    .logo>a>h2 {
+    .desktop_logo>a>h2 {
         margin: 0;
         height: 40px;
         line-height: 40px;
     }
 
-    .header>.navigator {
+    .desktop_header>.desktop_navigator {
         position: fixed;
         right: 15px;
         margin: 5px;
         display: flex;
     }
 
-    .navigator>.nav_item {
+    .desktop_nav_item {
         width: 30px;
         height: 30px;
         background-color: rgb(34, 34, 34);
@@ -51,21 +52,35 @@
         margin-left: 10px;
     }
 
-    .navigator>.nav_item:hover {
-        background-color: rgb(65, 65, 65);
+    .desktop_sidebar_switch {
+        margin: 5px;
     }
 
-    .navigator>.search>a>img {
+    .desktop_sidebar_switch > label > img {
         width: 20px;
         height: 20px;
         margin: 5px;
     }
 
-    .navigator>.light_dark>input[type="checkbox"] {
+    .desktop_sidebar_switch > input[type="checkbox"] {
         display: none;
     }
 
-    .navigator>.light_dark>label>img {
+    .desktop_nav_item:hover {
+        background-color: rgb(65, 65, 65);
+    }
+
+    .desktop_navigator>.desktop_search>a>img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .desktop_navigator>.desktop_light_dark>input[type="checkbox"] {
+        display: none;
+    }
+
+    .desktop_navigator>.desktop_light_dark>label>img {
         width: 22px;
         height: 22px;
         margin: 4px;
@@ -75,7 +90,7 @@
 }
 
 .light {
-    .header {
+    .desktop_header {
         display: flex;
         width: 100%;
         background-color: rgb(243, 237, 255);
@@ -88,36 +103,37 @@
         top: 0;
     }
 
-    .logo {
+    .desktop_logo {
         height: 40px;
         margin-left: 10px;
         display: flex;
     }
 
-    .logo>a {
+    .desktop_logo>a {
         display: flex;
         text-decoration: none;
-        color: rgb(0, 0, 0)
+        color: rgb(0, 0, 0);
+        transition: 0.2s;
     }
 
-    .logo>a>img {
+    .desktop_logo>a>img {
         height: 40px;
     }
 
-    .logo>a>h2 {
+    .desktop_logo>a>h2 {
         margin: 0;
         height: 40px;
         line-height: 40px;
     }
 
-    .header>.navigator {
+    .desktop_header>.desktop_navigator {
         position: fixed;
         right: 15px;
         margin: 5px;
         display: flex;
     }
 
-    .navigator>.nav_item {
+    .desktop_nav_item {
         width: 30px;
         height: 30px;
         background-color: rgb(221, 214, 233);
@@ -127,21 +143,35 @@
         margin-left: 10px;
     }
 
-    .navigator>.nav_item:hover {
-        background-color: rgb(232, 232, 232);
+    .desktop_sidebar_switch {
+        margin: 5px;
     }
 
-    .navigator>.search>a>img {
+    .desktop_sidebar_switch > label > img {
         width: 20px;
         height: 20px;
         margin: 5px;
     }
 
-    .navigator>.light_dark>input[type="checkbox"] {
+    .desktop_sidebar_switch > input[type="checkbox"] {
         display: none;
     }
 
-    .navigator>.light_dark>label>img {
+    .desktop_nav_item:hover {
+        background-color: rgb(232, 232, 232);
+    }
+
+    .desktop_navigator>.desktop_search>a>img {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .desktop_navigator>.desktop_light_dark>input[type="checkbox"] {
+        display: none;
+    }
+
+    .desktop_navigator>.desktop_light_dark>label>img {
         width: 22px;
         height: 22px;
         margin: 4px;
