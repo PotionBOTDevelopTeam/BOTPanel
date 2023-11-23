@@ -1,0 +1,95 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: auto;
+}
+
+.dark {
+    background-color: rgb(1, 0, 38);
+
+    .mainContainer {
+        height: 100vh;
+        width: 100%;
+        margin-top: 60px;
+        transition: 0.4s;
+        background-color: rgb(1, 0, 38);
+        color: white;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: auto;
+        padding: 50px;
+        padding-bottom: 100px;
+    }
+
+    .mainContainer.show {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    .mainContainer.noshow {
+        width: calc((100% - 250px) + 250px);
+        margin-left: 0;
+    }
+
+    .mainContainer::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(10, 6, 20);
+    }
+
+    .mainContainer::-webkit-scrollbar-track {
+        margin-top: 10px;
+        margin-bottom: 10vh;
+    }
+
+    .mainContainer::-webkit-scrollbar-thumb {
+        background-color: #818B99;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+}
+
+.light {
+    background-color: rgb(227, 226, 255);
+
+    .mainContainer {
+        height: 100vh;
+        width: 100%;
+        margin-top: 60px;
+        transition: 0.4s;
+        background-color: rgb(227, 226, 255);
+        color: black;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: auto;
+        padding: 50px;
+        padding-bottom: 100px;
+    }
+
+    .mainContainer.show {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    .mainContainer.noshow {
+        width: calc((100% - 250px) + 250px);
+        margin-left: 0;
+    }
+
+    .mainContainer::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(227, 226, 255);
+    }
+
+    .mainContainer::-webkit-scrollbar-track {
+        margin-top: 10px;
+        margin-bottom: 10vh;
+    }
+
+    .mainContainer::-webkit-scrollbar-thumb {
+        background-color:#b2b4f9;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+}

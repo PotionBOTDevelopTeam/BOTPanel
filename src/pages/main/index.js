@@ -5,6 +5,8 @@ import DesktopSideBar from '../components/desktop/sidebar'
 import MobileHeader from '../components/mobile/header'
 import MobileSideBar from '../components/mobile/sidebar'
 import './index.css'
+import MainContainer from './components/maincontainer'
+import SideBarEffect from '../components/mobile/sidebarEffect'
 
 const MainPage = () => {
     const [mode, setMode] = useState(jscookie.get('theme') === 'light' ? 'light' : 'dark')
@@ -41,16 +43,20 @@ const MainPage = () => {
                 label: '選擇伺服器',
                 buttomBorder: true,
                 iconBackgroundColor: (mode === 'light' ? '#FFF' : '#123'),
-                selected: true
+                selected: true,
+                redirectURL: 'https://youtu.be/dQw4w9WgXcQ'
             },
             {
-                icon: `./icons/icon_server_${mode === 'light' ? 'dark' : 'light'}.png`,
-                label: '選擇伺服器',
+                icon: `./icons/icon_invite.png`,
+                label: '邀請機器人',
                 buttomBorder: false,
-                iconBackgroundColor: (mode === 'light' ? '#FFF' : '#123'),
-                selected: false
+                iconBackgroundColor: 'rgba(113, 136, 254, 0.3)',
+                selected: false,
+                redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
         ]} mode={mode} sideBarShow={sideBarShow} />
+        <SideBarEffect mode={mode} sideBarShow={sideBarShow}/>
+        <MainContainer mode={mode} />
     </div>) : (<div>
         <DesktopHeader mode={mode} setMode={setMode} sideBarShow={sideBarShow} setSideBarShow={setSideBarShow} />
         <DesktopSideBar items={[
@@ -59,16 +65,19 @@ const MainPage = () => {
                 label: '選擇伺服器',
                 buttomBorder: true,
                 iconBackgroundColor: (mode === 'light' ? '#FFF' : '#123'),
-                selected: true
+                selected: true,
+                redirectURL: 'https://youtu.be/dQw4w9WgXcQ'
             },
             {
-                icon: `./icons/icon_server_${mode === 'light' ? 'dark' : 'light'}.png`,
-                label: '選擇伺服器',
+                icon: `./icons/icon_invite.png`,
+                label: '邀請機器人',
                 buttomBorder: false,
-                iconBackgroundColor: (mode === 'light' ? '#FFF' : '#123'),
-                selected: false
+                iconBackgroundColor: 'rgba(113, 136, 254, 0.3)',
+                selected: false,
+                redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
         ]} mode={mode} sideBarShow={sideBarShow} />
+        <MainContainer mode={mode} sideBarShow={sideBarShow}/>
     </div>))
 }
 

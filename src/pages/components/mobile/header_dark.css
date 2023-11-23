@@ -14,7 +14,6 @@
 
     .logo {
         height: 40px;
-        margin-left: 10px;
         display: flex;
     }
 
@@ -54,6 +53,13 @@
 
     .sidebar_switch {
         margin: 5px;
+        margin-left: 20px;
+        display: flex;
+    }
+
+    .sidebar_switch > label {
+        height: 30px;
+        width: 30px;
     }
 
     .sidebar_switch > label > img {
@@ -78,6 +84,15 @@
 
     .navigator>.light_dark>input[type="checkbox"] {
         display: none;
+    }
+
+    .navigator > .light_dark {
+        display: flex;
+    }
+
+    .navigator > .light_dark > label {
+        height: 30px;
+        width: 30px;
     }
 
     .navigator>.light_dark>label>img {

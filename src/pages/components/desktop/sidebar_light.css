@@ -1,14 +1,36 @@
 .light > .desktop {
     .sidebar {
         height: 100%;
-        width: 250px;
-        background-color: rgb(204, 198, 221);
+        width: 275px;
+        background-color: rgb(232, 222, 255);
         position: fixed;
+        margin-top: 60px;
         padding: 10px;
-        padding-top: 80px;
-        transition: 0.4s
+        padding-top: 20px;
+        transition: 0.4s;
+        z-index: 9999;
+        top: 0;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
     
+    .sidebar::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(232, 222, 255);
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        margin-top: 10px;
+        margin-bottom: 8vh;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: rgb(195, 190, 243);
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+
     .show {
         transform: translateX(0);
     }
@@ -41,7 +63,7 @@
     }
     
     .selected {
-        background-color: rgb(167, 151, 230);
+        background-color: rgb(205, 193, 255);
     }
 
     .sidebar_item > .icon {

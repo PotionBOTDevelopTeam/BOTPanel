@@ -8,7 +8,7 @@ const SideBar = ({ items, mode, sideBarShow }) => {
                 {
                     items.map(item => (
                         <div className={`item_container ${item.buttomBorder ? 'with_buttom_border' : ''}`}>
-                            <a href='https://youtu.be/dQw4w9WgXcQ'>
+                            <a href={item.redirectURL}>
                                 <div className={`sidebar_item ${item.selected ? 'selected' : ''}`}>
                                     <div className='icon' style={{ backgroundColor: item.iconBackgroundColor }}>
                                         <img alt={item.label} src={item.icon}></img>

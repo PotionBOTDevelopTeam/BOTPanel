@@ -1,14 +1,37 @@
 .dark > .mobile {
     .sidebar {
         height: 100%;
-        width: 250px;
+        width: 275px;
         background-color: rgb(10, 6, 20);
         position: fixed;
+        margin-top: 60px;
         padding: 10px;
-        padding-top: 80px;
-        transition: 0.4s
+        padding-top: 20px;
+        transition: 0.4s;
+        z-index: 9999;
+        top: 0;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
-    
+
+
+    .sidebar::-webkit-scrollbar {
+        width: 12px;
+        background-color: rgb(10, 6, 20);
+    }
+
+    .sidebar::-webkit-scrollbar-track {
+        margin-top: 10px;
+        margin-bottom: 8vh;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+        background-color: #818B99;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+    }
+
     .show {
         transform: translateX(0);
     }
@@ -17,6 +40,7 @@
     }
 
     .item_container {
+        transition: 0.2s;
         padding: 10px;
         padding-top: 0;
     }

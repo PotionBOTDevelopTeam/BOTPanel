@@ -7,12 +7,6 @@ const Header = ({ mode, setMode, sideBarShow, setSideBarShow }) => {
             <div className={mode}>
                 <div className="mobile">
                     <nav className="header">
-                        <div className="logo">
-                            <a href="https://youtu.be/dQw4w9WgXcQ">
-                                <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
-                                <h2>神奇的藥水..嗎</h2>
-                            </a>
-                        </div>
                         <div className="nav_item sidebar_switch">
                             <input type="checkbox" id="sidebar_switch" onChange={() => {
                                 sideBarShow ? setSideBarShow(false) : setSideBarShow(true)
@@ -20,6 +14,12 @@ const Header = ({ mode, setMode, sideBarShow, setSideBarShow }) => {
                             <label htmlFor='sidebar_switch'>
                                 <img alt="開啟/關閉側邊欄" src={`./icons/icon_menu_${mode === 'light' ? 'dark' : 'light'}.png`}></img>
                             </label>
+                        </div>
+                        <div className="logo">
+                            <a href="https://youtu.be/dQw4w9WgXcQ">
+                                <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
+                                <h2>神奇的藥水..嗎</h2>
+                            </a>
                         </div>
                         <div className="navigator">
                             <div className="nav_item light_dark">
