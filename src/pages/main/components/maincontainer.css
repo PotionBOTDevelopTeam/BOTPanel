@@ -21,6 +21,82 @@ body {
         padding-bottom: 100px;
     }
 
+    .main_guild_container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .mainContainer > .main_guild_container > .guild_container {
+        max-width: 100%;
+        position: relative;
+        background-color: rgb(39, 32, 57);
+        border-radius: 20px;
+        transition: 0.4s;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+
+        .no_icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 140px;
+            text-align: center;
+            transition: background-color 0.2s;
+            pointer-events: none;
+        }
+
+        .backdrop_filter {
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: 0.4s;
+            pointer-events: none;
+        }
+
+        .server_icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(54, 54, 54);
+            transition: 0.4s;
+            border-radius: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .server_icon p {
+            line-height: 50px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .server_icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+
+        .server_content {   
+            line-height: 50px;
+        }
+
+        .server_content > p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .guild_container:hover {
+        transform: scale(1.1);
+    }
+
     .mainContainer.show {
         width: calc(100% - 250px);
         margin-left: 250px;
@@ -66,6 +142,77 @@ body {
         padding-bottom: 100px;
     }
 
+    .main_guild_container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .mainContainer > .main_guild_container > .guild_container {
+        position: relative;
+        background-color: rgb(209, 191, 255);
+        border-radius: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: 0.4s;
+        background-size: cover;
+
+        .no_icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 140px;
+            text-align: center;
+            transition: background-color 0.2s;
+            pointer-events: none;
+        }
+
+        .backdrop_filter {
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: 0.4s;
+        }
+
+
+        .server_icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            transition: 0.4s;
+            border-radius: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .server_icon p {
+            line-height: 50px;
+            text-align: center;
+            border-radius: 100px;
+            transition-timing-function: ease-in-out;
+            pointer-events: none;
+        }
+
+        .server_icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+        }
+
+        .server_content {
+            line-height: 50px;
+        }
+    }
+
+    .guild_container:hover {
+        transform: scale(1.1);
+    }
+
     .mainContainer.show {
         width: calc(100% - 250px);
         margin-left: 250px;
@@ -92,4 +239,4 @@ body {
         border-radius: 9px;
         background-clip: content-box;
     }
-}
+}   

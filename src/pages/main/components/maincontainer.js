@@ -1,62 +1,35 @@
 import './maincontainer.css'
-const MainContainer = ({ mode, sideBarShow }) => {
+import './maincontainer_placeholder.css'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import jscookie from 'js-cookie'
+
+function placeholderGen(count) {
+    let returnData = []
+    for (let i = 0; i < count; i++) {
+        returnData.push(<div className='loading_placeholder'>
+            <div className='loading_backdrop_filter'>
+                <div className='loading_server_icon'></div>
+                <div className='loading_server_content'></div>
+            </div>
+        </div>)
+    }
+    return returnData
+}
+
+const MainContainer = ({ mode, sideBarShow, userData, loggedIN, mutualGuilds }) => {
     return (<div className={mode}>
         <div className={`mainContainer ${sideBarShow ? 'show' : 'noshow'}`}>
-            <h1>Never Gonna Give You Up - Rick Astley</h1>
-            <p>We're no strangers to love</p>
-            <p>You know the rules and so do I (do I)</p>
-            <p>A full commitment's what I'm thinking of</p>
-            <p>You wouldn't get this from any other guy</p>
-            <p>I just wanna tell you how I'm feeling</p>
-            <p>Gotta make you understand</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
-            <p>We've known each other for so long</p>
-            <p>Your heart's been aching, but you're too shy to say it (say it)</p>
-            <p>Inside, we both know what's been going on (going on)</p>
-            <p>We know the game and we're gonna play it</p>
-            <p>And if you ask me how I'm feeling</p>
-            <p>Don't tell me you're too blind to see</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
-            <p>We've known each other for so long</p>
-            <p>Your heart's been aching, but you're too shy to say it (to say it)</p>
-            <p>Inside, we both know what's been going on (going on)</p>
-            <p>We know the game and we're gonna play it</p>
-            <p>I just wanna tell you how I'm feeling</p>
-            <p>Gotta make you understand</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
-            <p>Never gonna give you up</p>
-            <p>Never gonna let you down</p>
-            <p>Never gonna run around and desert you</p>
-            <p>Never gonna make you cry</p>
-            <p>Never gonna say goodbye</p>
-            <p>Never gonna tell a lie and hurt you</p>
+            <h1>{loggedIN ? userData.username ? '歡迎, ' + userData.username : '載入中' : '請先登入'}</h1>
+            {(mutualGuilds.length !== 0) ? (<div className='main_guild_container'>{mutualGuilds.map(mutualGuild => (
+                <div className='guild_container' style={{ backgroundImage: `url("https://cdn.discordapp.com/icons/${mutualGuild.id}/${mutualGuild.icon}.webp")` }}>
+                    {mutualGuild.icon ? undefined : <div className='no_icon'><h1>{mutualGuild.name}</h1></div>}
+                    <div className='backdrop_filter'>
+                        <div className='server_icon'>{mutualGuild.icon ? <img alt={mutualGuild.name} src={`https://cdn.discordapp.com/icons/${mutualGuild.id}/${mutualGuild.icon}.webp`}></img> : <p>{mutualGuild.name}</p>}</div>
+                        <div className='server_content'><p><b>{mutualGuild.name}</b></p></div>
+                    </div>
+                </div>
+            ))}</div>) : (loggedIN ? <div className='loading_placeholder_container'>{placeholderGen(12)}</div> : undefined)}
         </div>
     </div>)
 }

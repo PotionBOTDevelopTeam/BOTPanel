@@ -1,0 +1,109 @@
+@keyframes glowing {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 25%;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.light {
+    .loading_placeholder_container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+
+        .loading_placeholder {
+            position: relative;
+            background-color: rgb(223, 211, 255);
+            border-radius: 20px;
+            transition: 0.4s;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .loading_backdrop_filter {
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: 0.4s;
+            pointer-events: none;
+        }
+
+        .loading_server_icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(206, 206, 206);
+            transition: 0.4s;
+            border-radius: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: glowing 4s infinite;
+        }
+
+        .loading_server_content {
+            background-color: rgb(211, 211, 211);
+            margin-top: 15px;
+            height: 25px;
+            border-radius: 100px;
+            animation: glowing 4s infinite;
+        }
+    }
+}
+
+.dark {
+    .loading_placeholder_container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+
+        .loading_placeholder {
+            position: relative;
+            background-color: rgb(39, 32, 57);
+            border-radius: 20px;
+            transition: 0.4s;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .loading_backdrop_filter {
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: 0.4s;
+            pointer-events: none;
+        }
+
+        .loading_server_icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(54, 54, 54);
+            transition: 0.4s;
+            border-radius: 100px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: glowing 4s infinite;
+        }
+
+        .loading_server_content {
+            background-color: gray;
+            margin-top: 15px;
+            height: 25px;
+            border-radius: 100px;
+            animation: glowing 4s infinite;
+        }
+    }
+}
