@@ -17,9 +17,9 @@ function placeholderGen(count) {
     return returnData
 }
 
-const MainContainer = ({ mode, sideBarShow, userData, loggedIN, mutualGuilds }) => {
+const MainContainer = ({ mode, mobileMode, sideBarShow, userData, loggedIN, mutualGuilds }) => {
     return (<div className={mode}>
-        <div className={`mainContainer ${sideBarShow ? 'show' : 'noshow'}`}>
+        <div className={`mainContainer ${mobileMode ? 'mobile' : 'desktop'} ${sideBarShow ? 'show' : 'noshow'}`}>
             <h1>{loggedIN ? userData.username ? '歡迎, ' + userData.username : '載入中' : '請先登入'}</h1>
             {(mutualGuilds.length !== 0) ? (<div className='main_guild_container'>{mutualGuilds.map(mutualGuild => (
                 <div className='guild_container' style={{ backgroundImage: `url("https://cdn.discordapp.com/icons/${mutualGuild.id}/${mutualGuild.icon}.webp")` }}>

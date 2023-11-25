@@ -7,7 +7,8 @@ import MobileSideBar from '../components/mobile/sidebar'
 import './index.css'
 import MainContainer from './components/maincontainer'
 import SideBarEffect from '../components/mobile/sidebarEffect'
-import Login from '../components/desktop/login'
+import DesktopLogin from '../components/desktop/login'
+import MobileLogin from '../components/mobile/login'
 import axios from 'axios'
 
 const options = {
@@ -97,7 +98,7 @@ const MainPage = () => {
     }, [mobileMode, windowWidth])
 
     return (mobileMode ? (<div>
-        <Login mode={mode} loggedIN={loggedIN} />
+        <MobileLogin mode={mode} loggedIN={loggedIN} />
         <MobileHeader mode={mode} setMode={setMode} sideBarShow={sideBarShow} setSideBarShow={setSideBarShow} />
         <MobileSideBar items={[
             {
@@ -116,11 +117,11 @@ const MainPage = () => {
                 selected: false,
                 redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
-        ]} mode={mode} sideBarShow={sideBarShow} />
+        ]} mode={mode} sideBarShow={sideBarShow} userData={userData}/>
         <SideBarEffect mode={mode} sideBarShow={sideBarShow} />
-        <MainContainer mode={mode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN} mutualGuilds={mutualGuilds} />
+        <MainContainer mode={mode} mobileMode={mobileMode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN} mutualGuilds={mutualGuilds} />
     </div>) : (<div>
-        <Login mode={mode} loggedIN={loggedIN} />
+        <DesktopLogin mode={mode} loggedIN={loggedIN} />
         <DesktopHeader mode={mode} setMode={setMode} sideBarShow={sideBarShow} setSideBarShow={setSideBarShow} />
         <DesktopSideBar items={[
             {
@@ -139,7 +140,7 @@ const MainPage = () => {
                 selected: false,
                 redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
-        ]} mode={mode} sideBarShow={sideBarShow} />
+        ]} mode={mode} sideBarShow={sideBarShow} userData={userData}/>
         <MainContainer mode={mode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN} mutualGuilds={mutualGuilds} />
     </div>))
 }
