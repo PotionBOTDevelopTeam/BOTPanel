@@ -102,20 +102,14 @@
 
         .sidebar_footer_container {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: calc(100% - 20px);
-
-            .sidebar_footer_options {
-                position: relative;
-                bottom: 50px;
-                margin: 10px;
-                z-index: 1;
-                margin-bottom: 50px;    
-            }
+            bottom: 40px;
+            left: 10px;
+            width: calc(100% - 30px);
 
             .sidebar_footer {
                 position: relative;
+                top: 50px;
+                bottom: 0;
                 transition: 0.4s;   
                 margin: 10px;
                 margin-right: 0;
@@ -177,20 +171,42 @@
             transform: rotate(180deg);
             transition: 0.4s;
         }
+        
+        .sidebar_footer_options {
+            position: relative;
+            bottom: 50px;
+            margin: 10px;
+            margin-right: 0px;
+            margin-bottom: 0;
+            z-index: 1;  
+        }
+
+        .sidebar_footer_option {
+            background-color: rgb(33, 32, 38);
+            padding-top: 40px;
+            border-radius: 0px 0px 10px 10px;
+        }
 
         .sidebar_footer_options a {
+            position: relative;
             color: white;
             display: flex;
             justify-content: center;
-            margin-left: 10px;
             line-height: 30px;
+            bottom: 5px;
+            margin: 5px;
+            margin-top: 10px;
             padding: 5px;
             transition: 0.2s;
             border-radius: 10px;
         }
 
-        .sidebar_footer_options a:hover {
+        .sidebar_footer_options.logout a:hover {
             background-color: rgba(255, 87, 92, 0.4)
+        }
+
+        .sidebar_footer_options.login a:hover {
+            background-color: rgba(206, 252, 126, 0.4)
         }
 
         .sidebar_footer_options a img {

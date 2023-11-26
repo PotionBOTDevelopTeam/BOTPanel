@@ -7,7 +7,7 @@ const Login = ({ mode, loggedIN }) => {
         <div className='background'>
             <div className='login_container'>
                 <div className='icon'>
-                                <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
+                    <img alt="神奇的藥水..嗎" src="./logo_256.png"></img>
                 </div>
                 <div className='text'>
                     <h1><b>你好像還沒有登入?</b></h1>

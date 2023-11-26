@@ -117,7 +117,7 @@ const MainPage = () => {
                 selected: false,
                 redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
-        ]} mode={mode} sideBarShow={sideBarShow} userData={userData}/>
+        ]} mode={mode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN}/>
         <SideBarEffect mode={mode} sideBarShow={sideBarShow} />
         <MainContainer mode={mode} mobileMode={mobileMode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN} mutualGuilds={mutualGuilds} />
     </div>) : (<div>
@@ -140,7 +140,7 @@ const MainPage = () => {
                 selected: false,
                 redirectURL: 'https://discord.com/api/oauth2/authorize?client_id=906525606177566830&permissions=8&scope=bot%20applications.commands'
             }
-        ]} mode={mode} sideBarShow={sideBarShow} userData={userData}/>
+        ]} mode={mode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN}/>
         <MainContainer mode={mode} sideBarShow={sideBarShow} userData={userData} loggedIN={loggedIN} mutualGuilds={mutualGuilds} />
     </div>))
 }
